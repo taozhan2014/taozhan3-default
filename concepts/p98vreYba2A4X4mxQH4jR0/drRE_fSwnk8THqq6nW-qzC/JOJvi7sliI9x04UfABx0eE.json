@@ -1,0 +1,53 @@
+{
+  "uri" : "local://JOJvi7sliI9x04UfABx0eE/",
+  "name" : "trash in T",
+  "category" : ".issue",
+  "parent" : "local://drRE_fSwnk8THqq6nW-qzC/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "issue",
+    "expr" : {
+      "str" : "trash in T"
+    }
+  }, {
+    "name" : "audience",
+    "expr" : {
+      "str" : "people"
+    }
+  }, {
+    "name" : "reason",
+    "expr" : {
+      "str" : "clean environment"
+    }
+  }, {
+    "name" : "createTime",
+    "expr" : {
+      "str" : "2014-12-03T15:08:03.564Z"
+    }
+  }, {
+    "name" : "location",
+    "expr" : {
+      "json" : {
+        "lat" : 42.4845524,
+        "lon" : -71.20065029999999
+      }
+    }
+  }, {
+    "name" : "issueBind",
+    "expr" : {
+      "concept" : "/common/examples/a8nFL92qm5AL8awOWxStSD/",
+      "bindings" : {
+        "issue" : "issue",
+        "audience" : "audience",
+        "reason" : "reason",
+        "createTime" : "createTime",
+        "location" : "location"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "issueBind"
+  } ],
+  "isLambda" : false
+}

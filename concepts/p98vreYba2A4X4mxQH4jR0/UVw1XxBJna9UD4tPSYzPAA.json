@@ -1,0 +1,80 @@
+{
+  "uri" : "local://UVw1XxBJna9UD4tPSYzPAA/",
+  "name" : "copy of Sridhar Ramachandran (vCard)",
+  "category" : ".example",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_contact_fullName",
+    "expr" : {
+      "str" : "Sridhar Ramachandranb"
+    }
+  }, {
+    "name" : "_contact_givenName",
+    "expr" : {
+      "str" : "Sridharb"
+    }
+  }, {
+    "name" : "_contact_surName",
+    "expr" : {
+      "str" : "Ramachandranb"
+    }
+  }, {
+    "name" : "_contact_honPrefix",
+    "expr" : {
+      "str" : "Mr. b"
+    }
+  }, {
+    "name" : "_contact_honSuffix",
+    "expr" : {
+      "str" : ""
+    }
+  }, {
+    "name" : "_contact_nicknames",
+    "expr" : {
+      "str" : "test nicknameb"
+    }
+  }, {
+    "name" : "_contact_title",
+    "expr" : {
+      "str" : "Founderb"
+    }
+  }, {
+    "name" : "_contact_role",
+    "expr" : {
+      "str" : "testb"
+    }
+  }, {
+    "name" : "_contact_organization",
+    "expr" : {
+      "str" : "LambdaZen LLCb"
+    }
+  }, {
+    "name" : "_contact_notes",
+    "expr" : {
+      "str" : "This is contact card for Sridhar test bb"
+    }
+  }, {
+    "name" : "contact",
+    "expr" : {
+      "concept" : "/common/core/binr1ODnyG9ZyK4p8kyN1B/",
+      "bindings" : {
+        "fullName" : "_contact_fullName",
+        "givenName" : "_contact_givenName",
+        "surName" : "_contact_surName",
+        "honPrefix" : "_contact_honPrefix",
+        "honSuffix" : "_contact_honSuffix",
+        "nicknames" : "_contact_nicknames",
+        "title" : "_contact_title",
+        "role" : "_contact_role",
+        "organization" : "_contact_organization",
+        "notes" : "_contact_notes"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "contact"
+  } ],
+  "isLambda" : false
+}

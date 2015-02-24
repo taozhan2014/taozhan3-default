@@ -1,0 +1,50 @@
+{
+  "uri" : "local://w48ZAWw-LGBsTqJ9WeuhIF/",
+  "name" : "Test wishlist",
+  "category" : ".item",
+  "parent" : "local://rk-xeSs83fArvqTA4-oJ62/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "title",
+    "expr" : {
+      "str" : "Test wishlist"
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "My first item in wish list"
+    }
+  }, {
+    "name" : "submitUser",
+    "expr" : {
+      "str" : "taozhan3"
+    }
+  }, {
+    "name" : "submitTime",
+    "expr" : {
+      "str" : "2014-12-09T17:33:54.541Z"
+    }
+  }, {
+    "name" : "voteUsers",
+    "expr" : {
+      "json" : [ "taozhan3" ]
+    }
+  }, {
+    "name" : "listItem",
+    "expr" : {
+      "concept" : "/common/core/AefSjI1HPpA9faYHYquQU1/",
+      "bindings" : {
+        "title" : "title",
+        "submitUser" : "submitUser",
+        "submitTime" : "submitTime",
+        "voteUsers" : "voteUsers",
+        "description" : "description"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "listItem"
+  } ],
+  "isLambda" : false
+}

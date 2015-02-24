@@ -1,0 +1,41 @@
+{
+  "uri" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "name" : "default",
+  "category" : "",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "username",
+    "expr" : {
+      "str" : "taozhan3",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "view",
+    "expr" : {
+      "concept" : "/common/admin/D5PYpn1PSC8KWa0qT7tCtE/",
+      "bindings" : {
+        "username" : "username"
+      }
+    }
+  }, {
+    "name" : "_repo_holder",
+    "expr" : {
+      "str" : ""
+    }
+  }, {
+    "name" : "repo",
+    "expr" : {
+      "concept" : "/common/core/dikjRMQUWrB_rK4hvxvxP8/",
+      "bindings" : {
+        "holder" : "_repo_holder"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "view"
+  }, {
+    "var" : "repo"
+  } ],
+  "isLambda" : false
+}

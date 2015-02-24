@@ -1,0 +1,48 @@
+{
+  "uri" : "local://orQpgqkhUC9l6a_W95ZXE4/",
+  "name" : "View",
+  "category" : ".view",
+  "parent" : "local://rGQaBABvbUBc44N8VjlI69/",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "model",
+    "type" : "local://rGQaBABvbUBc44N8VjlI69/"
+  } ],
+  "vars" : [ {
+    "name" : "cssResourceUri",
+    "expr" : {
+      "str" : "local://Go7ho1-VVL9cw4l40Se129/",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "jsResourceUri",
+    "expr" : {
+      "str" : "local://DtBuQmCy3l9zv4pcukX_D1/",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "htmlTemplate",
+    "expr" : {
+      "str" : "<html>\n    <head>\n        <!--Include your main.css by using the uri as resource. cssResourceUri is a mustache property that is defined in the propertyMap of page property.-->\n        <!--You can also directly use Concept uri here if it is a static value.-->\n        <link rel=\"stylesheet\" href=\"/resource{{{cssResourceUri}}}\">\n        \n        <!--Include your main.js by using the uri as resource. Same as the css resource, you can either use a static value or a dynamic mustache property.-->\n        <script src=\"/resource{{{jsResourceUri}}}\"></script>\n        \n        <!--You can link any resource defined in ConceptJS using its uri.-->\n        <!--Popular javascript libraries such as jQuery, bootstrap, knockout, fontawesome, etc., have already been included.-->\n        \n        <!--We will use our own save buttons so this line will disable ConceptJS automatic save/cancel feature-->\n        <meta name=\"cjsSaveMode\" content=\"auto\">\n    </head>\n    <body>\n        <form action=\"\" method=\"post\" class=\"smart-green\" id=\"propertyForm\">\n            <h1>Property Form \n                <span>Please fill all the properties in the fields.</span>\n            </h1>\n            <div data-bind=\"foreach: properties\">\n                <label>\n                    <span data-bind=\"text: propertyName\"></span>\n                    <input type=\"text\" data-bind=\"value: propertyValue, attr: {placeholder: propertyPlaceHolder}\" />\n                </label>\n            </div>\n    \n            <button id=\"saveBtn\" type=\"button\" class=\"btn btn-primary\" data-bind=\"click: save\">\n                <span class=\"glyphicon glyphicon-floppy-save\"></span>&nbsp; Save changes\n            </button>    \n        </form>\n        \n        <script>\n            //Create our knockout ViewModel with the model uri. ViewModel is defined in main.js\n            var viewModel = new ViewModel(\"{{{modelUri}}}\");\n            \n            ko.applyBindings(viewModel, document.getElementById('propertyForm'));\n        </script>\n        \n        <!--Below are tour related HTML and script and you can safely ignore them for now.-->\n        <div id=\"cjsCreateTourDialogDone\" tabindex=\"-1\" class=\"modal fade\" role=\"dialog\" style=\"display: none;\">\n            <div class=\"modal-dialog\" style=\"width: 50%\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-body\">\n                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\"><i class=\"fa fa-close\"></i></button>\n                        <p><h4>Congratulations! You have just completed ConceptJS creation tour!</h4></p>\n                        <p>That's it! You just created your first data-driven web application with ConceptJS. No setup, no installation, no backend layers. All your concepts run on our cloud platform with the data/code just <a href=\"javascript:void(0)\" data-bind=\"click: showIDE\" class=\"link\">one-click</a> away! Wait, there is more... <p>\n                        <ul>\n            \t            <li>\n            \t                <i class=\"fa fa-share-square fa-2x fa-fw\"></i>\n            \t                <p>Share this URL <b><span id=\"currentUrl\" data-bind=\"text: url\"></span></b> with your friends to get their feedback. You can access the URL from anywhere.</p>\n            \t            </li>\n                            <li>\n                                <i class=\"fa fa-code fa-2x fa-fw\"></i>\n                                <p>Want to tweak this application? Sure thing! Change the data in <a href=\"javascript:void(0)\" data-bind=\"text: concName(), click: showIDE\" class=\"link\"></a>. Modify the HTML templates in <a href=\"javascript:void(0)\" data-bind=\"click: showView\" class=\"link\">View</a>. Access the Javascript in <a href=\"javascript:void(0)\" data-bind=\"click: showJS\" class=\"link\">main.js</a>. Redesign the CSS in <a href=\"javascript:void(0)\" data-bind=\"click: showCSS\" class=\"link\">main.css</a>. </p>\n                            </li>\n            \t            <li>\n            \t                <i class=\"fa fa-trophy fa-2x fa-fw\"></i>\n            \t                <p>Want to see what other folks have created? Check out the <a href=\"/view/common/gallery/\" class=\"link\" target=\"_blank\">Editor's Top Picks</a>.</p>\n            \t            </li>\n            \t            <li>\n            \t                <i class=\"fa fa-lightbulb-o fa-2x fa-fw\"></i>\n            \t                <p>Have an idea, but aren't sure how to implement it? No problem. Add your idea to the <a href=\"/view/common/core/qNzaB3q3zP9PnKPs-EkcRC/\" class=\"link\" target=\"_blank\">ConceptJS Wishlist</a>. Someone in the ConceptJS community might implement your idea for fun!</p>\n            \t            </li>\n            \t            <li>\n            \t                <i class=\"fa fa-question-circle fa-2x fa-fw\"></i>\n            \t                <p>We are always here to help. Click the blue bar in the bottom-right of your browser to chat with us. We will gladly solve any issue you might encounter. You can also visit the <a class=\"link\" href=\"/view/common/gallery/SPvbNoakTaB52qGMEEqjmE/\" target=\"_blank\">Video Gallery</a> or the <a href=\"/view/common/univ/TyKIqG9e9OA9aa58w1uzKF/\" class=\"link\" target=\"_blank\">ConceptJS University</a> to learn more.</p>\n            \t            </li>\n                        </ul>\n                    </div>\n                    \n                    <div class=\"modal-footer\">\n                        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\"><span class=\"glyphicon glyphicon-remove\"></span> Close</button>\n                     </div>\n                </div>\n            </div>\n        </div>\n        \n        <script>   \n        \tvar urlComp = purl(document.referrer);\n\t\t\tvar tourName = urlComp.param('tour');     \t\n        \tfunction TourDoneDialogVM(){\n        \t\tvar self = this;\n        \t\tvar anchorUri = $cjs.getAnchorObj().uri;\n        \t\tvar view;\n        \t\t\n        \t\tthis.url = ko.observable(urlComp.attr('protocol')+\"://\"+urlComp.attr('host')+urlComp.attr('path'));\n        \t\t\n        \t\tthis.showIDE = function(){\n                    $cjs.redirect(anchorUri, \"_blank\", \"IDE\");\n        \t\t}\n        \t\t\n        \t\tthis.concName = function(){\n        \t\t\treturn $cjs(anchorUri).name();\n        \t\t}\n        \t\t\n        \t\tthis.showView = function(){\n        \t\t\tif (!view){\n        \t\t\t\tview = $cjs(anchorUri).children(\".view\")[0];\n        \t\t\t}\n        \t\t\t$cjs.redirect(view.uri(), \"_blank\", \"IDE\");\n        \t\t}\n        \t\t\n        \t\tthis.showJS = function(){\n        \t\t\tif (!view){\n        \t\t\t\tview = $cjs(anchorUri).children(\".view\")[0];\n        \t\t\t}\n        \t\t\t$cjs.redirect(view.childrenUris(\"js\")[0], \"_blank\", \"VIEW\");\n        \t\t}\n        \t\t\n        \t\tthis.showCSS = function(){\n        \t\t\tif (!view){\n        \t\t\t\tview = $cjs(anchorUri).children(\".view\")[0];\n        \t\t\t}\n        \t\t\t$cjs.redirect(view.childrenUris(\"css\")[0], \"_blank\", \"VIEW\");\n        \t\t}\n        \t}\n        \t\n        \tfunction setIntroPrimaryButton(){\n           \t\tif ($(\".introjs-nextbutton\").hasClass(\"introjs-disabled\")){\n              \t\t$(\".introjs-nextbutton\").removeClass(\"introjs-primary\");\n              \t\t$(\".introjs-skipbutton\").addClass(\"introjs-primary\");\n              \t}else{\n              \t\t$(\".introjs-skipbutton\").removeClass(\"introjs-primary\");\n              \t\t$(\".introjs-nextbutton\").addClass(\"introjs-primary\");\n              \t}\n           \t}\n        \t\n        \t$(function(){       \t\t\n        \t\tko.applyBindings(new TourDoneDialogVM(), document.getElementById('cjsCreateTourDialogDone'));\n        \t});\n        </script>\n    </body>\n</html>",
+      "strEditMode" : "html"
+    }
+  }, {
+    "name" : "_page_propertyMap",
+    "expr" : {
+      "script" : "return {modelUri: model.uri(),\n        cssResourceUri: cssResourceUri,\n        jsResourceUri: jsResourceUri}"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/Xfh2VQ4HSK9klqbqqR-eBB/",
+      "bindings" : {
+        "htmlTemplate" : "htmlTemplate",
+        "propertyMap" : "_page_propertyMap"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  } ],
+  "isLambda" : true
+}

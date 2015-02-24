@@ -1,0 +1,48 @@
+{
+  "uri" : "local://MzAsgwr_hJ9KaacG6DvnV1/",
+  "name" : "View",
+  "category" : ".view",
+  "parent" : "local://Hy2hLqsj2z8tu4mO13rJ24/",
+  "flags" : "U",
+  "lvars" : [ {
+    "name" : "model",
+    "type" : "local://Hy2hLqsj2z8tu4mO13rJ24/"
+  } ],
+  "vars" : [ {
+    "name" : "cssResourceUri",
+    "expr" : {
+      "str" : "local://hZfAe62IJHBzE4gE8ej3b7/",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "jsResourceUri",
+    "expr" : {
+      "str" : "local://BZH5Mx5MYJ81dqeAb9kS6B/",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "htmlTemplate",
+    "expr" : {
+      "str" : "<html>\n    <head>\n        <!--Include your main.css by using the uri as resource. cssResourceUri is a mustache property that is defined in the propertyMap of page property.-->\n        <!--You can also directly use Concept uri here if it is a static value.-->\n        <link rel=\"stylesheet\" href=\"/resource{{{cssResourceUri}}}\">\n        \n        <!--Include your main.js by using the uri as resource. Same as the css resource, you can either use a static value or a dynamic mustache property.-->\n        <script src=\"/resource{{{jsResourceUri}}}\"></script>\n        \n        <!--You can link any resource defined in ConceptJS using its uri.-->\n        <!--Popular javascript libraries such as jQuery, bootstrap, knockout, fontawesome, etc., have already been included.-->\n        \n        <!--We will use our own save buttons so this line will disable ConceptJS automatic save/cancel feature-->\n        <meta name=\"cjsSaveMode\" content=\"auto\">\n    </head>\n    <body>\n        <form action=\"\" method=\"post\" class=\"smart-green\" id=\"propertyForm\">\n            <h1>Property Form \n                <span>Please fill all the properties in the fields.</span>\n            </h1>\n            <div data-bind=\"foreach: properties\">\n                <label>\n                    <span data-bind=\"text: propertyName\"></span>\n                    <input type=\"text\" data-bind=\"value: propertyValue, attr: {placeholder: propertyPlaceHolder}\" />\n                </label>\n            </div>\n    \n            <button id=\"saveBtn\" type=\"button\" class=\"btn btn-primary\" data-bind=\"click: save\">\n                <span class=\"glyphicon glyphicon-floppy-save\"></span>&nbsp; Save changes\n            </button>    \n        </form>\n        \n        <script>\n            //Create our knockout ViewModel with the model uri. ViewModel is defined in main.js\n            var viewModel = new ViewModel(\"{{{modelUri}}}\");\n            \n            ko.applyBindings(viewModel);\n        </script>\n    </body>\n</html>",
+      "strEditMode" : "html"
+    }
+  }, {
+    "name" : "_page_propertyMap",
+    "expr" : {
+      "script" : "return {modelUri: model.uri(),\n        cssResourceUri: cssResourceUri,\n        jsResourceUri: jsResourceUri}"
+    }
+  }, {
+    "name" : "page",
+    "expr" : {
+      "concept" : "/common/core/Xfh2VQ4HSK9klqbqqR-eBB/",
+      "bindings" : {
+        "htmlTemplate" : "htmlTemplate",
+        "propertyMap" : "_page_propertyMap"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "page"
+  } ],
+  "isLambda" : true
+}

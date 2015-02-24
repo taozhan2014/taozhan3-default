@@ -1,0 +1,13 @@
+{
+  "uri" : "local://9uf-wfGHy19bMqAbvhc6s0/",
+  "name" : "taozhan3's first ConceptJS app",
+  "category" : "",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ ],
+  "isas" : [ {
+    "concept" : "local://wVVUqGbNljBuUa1NbCxze3/"
+  } ],
+  "isLambda" : false
+}

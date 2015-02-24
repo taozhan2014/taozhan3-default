@@ -1,0 +1,26 @@
+{
+  "uri" : "local://w7pjO108Sh8LIaq_Mai8E6/",
+  "name" : "taozhan3's University",
+  "category" : ".courses",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_courseIndex_lastVisitCourse",
+    "expr" : {
+      "str" : "local://ayqpRFEJc7BfK4he5A0h88/"
+    }
+  }, {
+    "name" : "courseIndex",
+    "expr" : {
+      "concept" : "/common/univ/Im-hwEGR8wB4_4Q6c20se6/",
+      "bindings" : {
+        "lastVisitCourse" : "_courseIndex_lastVisitCourse"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "courseIndex"
+  } ],
+  "isLambda" : false
+}

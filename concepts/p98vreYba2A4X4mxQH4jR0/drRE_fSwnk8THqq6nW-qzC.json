@@ -1,0 +1,27 @@
+{
+  "uri" : "local://drRE_fSwnk8THqq6nW-qzC/",
+  "name" : "copy of Example Issue to Action",
+  "category" : "",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "description",
+    "expr" : {
+      "str" : "",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "issueToAction",
+    "expr" : {
+      "concept" : "/common/examples/CSqJ-ldvtpBBqaZCzTzv-4/",
+      "bindings" : {
+        "description" : "description"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "issueToAction"
+  } ],
+  "isLambda" : false
+}

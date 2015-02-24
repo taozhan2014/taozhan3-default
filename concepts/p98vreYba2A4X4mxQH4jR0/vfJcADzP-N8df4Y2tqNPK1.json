@@ -1,0 +1,13 @@
+{
+  "uri" : "local://vfJcADzP-N8df4Y2tqNPK1/",
+  "name" : "copy of Sticky Notes",
+  "category" : "",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ ],
+  "isas" : [ {
+    "concept" : "/common/core/5GBYvJFAav9BdqzPmgtaOF/"
+  } ],
+  "isLambda" : false
+}

@@ -1,0 +1,50 @@
+{
+  "uri" : "local://BOEOWvF6bb8PMKP0hXsY90/",
+  "name" : "1stickynote",
+  "category" : ".note",
+  "parent" : "local://vfJcADzP-N8df4Y2tqNPK1/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "index",
+    "expr" : {
+      "num" : 0
+    }
+  }, {
+    "name" : "pos",
+    "expr" : {
+      "str" : "236|140"
+    }
+  }, {
+    "name" : "text",
+    "expr" : {
+      "str" : "11/18/2014 10:25 AM|This is my notes"
+    }
+  }, {
+    "name" : "bgcolor",
+    "expr" : {
+      "str" : "stickynote9"
+    }
+  }, {
+    "name" : "dated",
+    "expr" : {
+      "str" : "11/18/2014 10:25 AM|2014-11-18T15:25:27Z"
+    }
+  }, {
+    "name" : "note",
+    "expr" : {
+      "concept" : "/common/core/uGivwX3C4eBZyKsoYY2NMD/",
+      "bindings" : {
+        "pos" : "pos",
+        "text" : "text",
+        "dated" : "dated",
+        "index" : "index",
+        "bgcolor" : "bgcolor"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "note"
+  } ],
+  "isLambda" : false
+}

@@ -1,0 +1,50 @@
+{
+  "uri" : "local://HJPhQRp_JJ92Z4-yWAgUiE/",
+  "name" : "new item",
+  "category" : ".item",
+  "parent" : "local://0DJYMwn89ABGL4bHGfTVsA/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "title",
+    "expr" : {
+      "str" : "new item"
+    }
+  }, {
+    "name" : "description",
+    "expr" : {
+      "str" : "My first item"
+    }
+  }, {
+    "name" : "submitUser",
+    "expr" : {
+      "str" : "taozhan3"
+    }
+  }, {
+    "name" : "submitTime",
+    "expr" : {
+      "str" : "2014-12-09T19:25:34.465Z"
+    }
+  }, {
+    "name" : "voteUsers",
+    "expr" : {
+      "json" : [ "taozhan3" ]
+    }
+  }, {
+    "name" : "listItem",
+    "expr" : {
+      "concept" : "/common/core/AefSjI1HPpA9faYHYquQU1/",
+      "bindings" : {
+        "title" : "title",
+        "submitUser" : "submitUser",
+        "submitTime" : "submitTime",
+        "voteUsers" : "voteUsers",
+        "description" : "description"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "listItem"
+  } ],
+  "isLambda" : false
+}

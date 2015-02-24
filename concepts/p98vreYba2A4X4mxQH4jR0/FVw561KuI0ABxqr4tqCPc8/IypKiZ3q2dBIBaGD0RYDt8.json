@@ -1,0 +1,45 @@
+{
+  "uri" : "local://IypKiZ3q2dBIBaGD0RYDt8/",
+  "name" : "taozhan3_local://FVw561KuI0ABxqr4tqCPc8//thumbnail",
+  "category" : "",
+  "parent" : "local://FVw561KuI0ABxqr4tqCPc8/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "type",
+    "expr" : {
+      "str" : "image/jpeg"
+    }
+  }, {
+    "name" : "attachmentLink",
+    "expr" : {
+      "str" : "db://taozhan3/135def19-f5db-431f-ab7e-e3d973ac185a/"
+    }
+  }, {
+    "name" : "filename",
+    "expr" : {
+      "str" : "local://FVw561KuI0ABxqr4tqCPc8//thumbnail"
+    }
+  }, {
+    "name" : "_resource_content",
+    "expr" : {
+      "str" : "",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "resource",
+    "expr" : {
+      "concept" : "/common/core/0aqCL5Sms3AsMqfWAwxCi8/",
+      "bindings" : {
+        "content" : "_resource_content",
+        "type" : "type",
+        "filename" : "filename",
+        "attachmentLink" : "attachmentLink"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "resource"
+  } ],
+  "isLambda" : false
+}

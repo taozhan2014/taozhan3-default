@@ -1,0 +1,47 @@
+{
+  "uri" : "local://0DJYMwn89ABGL4bHGfTVsA/",
+  "name" : "copy of Wishlist",
+  "category" : "",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "title",
+    "expr" : {
+      "str" : "ConceptJS Apps Wish-list"
+    }
+  }, {
+    "name" : "username",
+    "expr" : {
+      "str" : "taozhan3"
+    }
+  }, {
+    "name" : "options",
+    "expr" : {
+      "json" : {
+        "disableAddByUsers" : false,
+        "includeCJSHeader" : true
+      }
+    }
+  }, {
+    "name" : "addNewTitle",
+    "expr" : {
+      "str" : "Couldn't find the idea in the list? add your own ..."
+    }
+  }, {
+    "name" : "wishlist",
+    "expr" : {
+      "concept" : "/common/core/WUDSYLknvD84IKvh2koMRA/",
+      "bindings" : {
+        "title" : "title",
+        "username" : "username",
+        "options" : "options",
+        "addNewTitle" : "addNewTitle"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "wishlist"
+  } ],
+  "isLambda" : false
+}

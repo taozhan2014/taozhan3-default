@@ -1,0 +1,34 @@
+{
+  "uri" : "local://ZcI0D_JgInAW2KfymRUPI5/",
+  "name" : "main.js",
+  "category" : "js",
+  "parent" : "local://1wgllTeJxU9e0qtnS61EVA/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "jsContent",
+    "expr" : {
+      "str" : "var urlComp = purl(document.referrer);\nvar tourName = urlComp.param('tour');\nvar multipage = urlComp.param('multipage');\n\nString.prototype.capitalize = function() {\n    return this.charAt(0).toUpperCase() + this.slice(1);\n}\n\nfunction topBar(message) {\n    $(\"html, body\").animate({ scrollTop: 0 }, \"slow\");\n    $(\"<div />\", { \"class\": 'topbar', text: message }).hide().prependTo(\"body\").slideDown('fast').delay(5000).slideUp(function() { \n        $(this).remove(); \n    });\n}\n\nfunction propertyModel(name, property){\n    this.property = property;\n    \n    this.propertyName = ko.observable(name.capitalize()+\":\");\n    this.propertyValue = property;\n    this.propertyPlaceHolder = ko.computed(function(){\n        return \"Enter the value of \"+this.propertyName();\n    }, this);\n}\n\nfunction ViewModel(uri){\n    var self = this;\n    //$cjs.ko API will bind all properties of your concept to ko observable automatically\n    this.cvm = $cjs.ko(uri);\n    \n    this.properties = ko.observableArray();\n    \n    //loop through available concept properties and create propertyModel for html bindings\n    _.each(this.cvm.getConc().propNames(), function(x){\n        self.properties.push(new propertyModel(x, self.cvm[x]))\n    });\n    \n    //handle save action in the form and use $cjs.session API to save the changes to cloud\n    this.save = function(){\n        $cjs.session.save();\n        topBar(\"Your changes have been successfully saved!\");\n    }\n}\n\n$(function(){\n    //The code below is related to the ConceptJS tour and can be ignored.\n    if(tourName == \"create\" && multipage == 2){\n        var intro = introJs();\n        intro.setOptions({\n            steps: [\n              \t{\n              \t\tstep: 8,\n                \telement: document.querySelector('#propertyForm'),\n                \tintro: \"You can now enter values for the properties and click <b>Save changes</b> button to save your changes.\",\n                \tposition: \"bottom\"\n              \t}\n            ],\n            showBullets: false\n        });\n        intro.start().oncomplete(function() {\n          \t$('#cjsCreateTourDialogDone').modal('show') ;\n        });\n    }\n})",
+      "strEditMode" : "js"
+    }
+  }, {
+    "name" : "_javascriptResource_fileName",
+    "expr" : {
+      "str" : "main.js",
+      "strEditMode" : ""
+    }
+  }, {
+    "name" : "javascriptResource",
+    "expr" : {
+      "concept" : "/common/core/nK_9eZMUDp8T6qqr7t5k67/",
+      "bindings" : {
+        "js" : "jsContent",
+        "fileName" : "_javascriptResource_fileName"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "javascriptResource"
+  } ],
+  "isLambda" : false
+}

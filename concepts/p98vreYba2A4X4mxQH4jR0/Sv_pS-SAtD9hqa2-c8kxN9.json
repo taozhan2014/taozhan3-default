@@ -1,0 +1,32 @@
+{
+  "uri" : "local://Sv_pS-SAtD9hqa2-c8kxN9/",
+  "name" : "copy of Sicilian Defense (Dragon variation)",
+  "category" : "opening",
+  "parent" : "local://p98vreYba2A4X4mxQH4jR0/",
+  "flags" : "U",
+  "lvars" : [ ],
+  "vars" : [ {
+    "name" : "_chessGame_pgnMoves",
+    "expr" : {
+      "str" : "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6"
+    }
+  }, {
+    "name" : "_chessGame_notes",
+    "expr" : {
+      "str" : "In chess, the Dragon Variation is one of the main lines of the Sicilian Defence. In the Dragon, Black fianchettoes his bishop on the h8?a1 diagonal. The line is one of the sharpest variations of the Sicilian Defence, making it one of the sharpest of all chess openings."
+    }
+  }, {
+    "name" : "chessGame",
+    "expr" : {
+      "concept" : "/common/core/EZ7fX6FJWuAVUqSbX_dy67/",
+      "bindings" : {
+        "pgnMoves" : "_chessGame_pgnMoves",
+        "notes" : "_chessGame_notes"
+      }
+    }
+  } ],
+  "isas" : [ {
+    "var" : "chessGame"
+  } ],
+  "isLambda" : false
+}
